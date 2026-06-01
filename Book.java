@@ -1,22 +1,31 @@
 class Book {
 	String title;
-	int pages;
+	String author;
+	double price;
 	
 	Book() {
-		title = "Varun";
-		pages = 100;
+	title = "Unknown";
+	author = "Unknown";
+	price = 0.0;
+	
 	}
 	
-	Book(String t, int p) {
-		title = t;
-		pages = p;
+	Book(String title, String author) {
+	this.title = title;
+	this.author = author;
+	this.price = 0.0;
 	}
 	
-	public static void main(String args[]) {
-		Book b1 = new Book();
-		Book b2 = new Book("java",450);
-		
-		System.out.println(b1.title + " - " + b1.pages);
-		System.out.println(b2.title + " - " + b2.pages);
+	Book(String title, String author, double price) {
+	this.title = title;
+	this.author = author;
+	this.price = price;
+	}
+	
+	void display() {
+		System.out.println("Title: " + title);
+		System.out.println("Author: " + author);
+		System.out.println("Price: " + price);
+		System.out.println("------------------");
 	}
 }
